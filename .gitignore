@@ -1,0 +1,10 @@
+# Browser profile and caches from REA
+.rea-browser/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local OS metadata
+Thumbs.db
+.DS_Store

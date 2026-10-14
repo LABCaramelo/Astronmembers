@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astron Members | Plataforma — Área de Membros</title>
+  <link rel="icon" href="/favicon/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    :root {
+      --app-bg: #0c0c0e;
+      --app-surface: #141418;
+      --app-card: #1a1a20;
+      --app-border: rgba(255, 255, 255, 0.08);
+      --app-accent: #e8402f;
+      --app-accent-2: #ff8a3d;
+    }
+    body.app-body {
+      background: var(--app-bg);
+      color: #fff;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    /* App Topbar */
+    .app-topbar {
+      height: 64px;
+      background: rgba(16, 16, 20, 0.95);
+      border-bottom: 1px solid var(--app-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      gap: 20px;
+      flex-shrink: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .app-logo {
+      height: 28px;
+      width: auto;
+    }
+    .app-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, rgba(232, 64, 47, 0.2), rgba(255, 138, 61, 0.2));
+      border: 1px solid rgba(255, 138, 61, 0.3);
+      color: #ff8a3d;
+    }
+    .app-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--app-border);
+    }
+    .app-tab-btn {
+      background: transparent;
+      border: 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .app-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .app-tab-btn.active {
+      background: var(--app-accent);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(232, 64, 47, 0.4);
+    }
+    .app-user-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .app-search {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--app-border);
+      border-radius: 999px;
+      padding: 6px 14px;
+      width: 220px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .app-search input {
+      background: transparent;
+      border: 0;
+      outline: 0;
+      color: #fff;
+      font-family: inherit;
+      font-size: 12.5px;
+      width: 100%;
+    }
+    .app-search input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .app-user-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--app-border);
+      border-radius: 999px;
+      padding: 4px 14px 4px 6px;
+      cursor: default;
+    }
+    .app-user-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e8402f, #ff8a3d);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .app-user-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .app-user-name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .app-user-role {
+      font-size: 10.5px;
+      color: #4cd48a;
+      font-weight: 600;
+    }
+    .app-home-link {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .app-home-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    /* Layout do App */
+    .app-shell {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    .app-sidebar {
+      width: 72px;
+      background: rgba(14, 14, 18, 0.95);
+      border-right: 1px solid var(--app-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    .app-side-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .app-side-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+    .app-side-btn.active {
+      background: linear-gradient(135deg, #e8402f, #ff8a3d);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(232, 64, 47, 0.4);
+    }
+    .app-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 32px 40px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    /* Banner da Vitrine */
+    .platform-hero {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 36px 40px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .platform-hero img.hero-bg-cover {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65);
+      transition: transform 0.6s ease;
+    }
+    .platform-hero:hover img.hero-bg-cover {
+      transform: scale(1.02);
+    }
+    .platform-hero__gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(12, 12, 14, 0.2) 0%, rgba(12, 12, 14, 0.95) 100%);
+    }
+    .platform-hero__copy {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+    }
+    .platform-hero__tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: var(--app-accent);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .platform-hero__title {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+    .platform-hero__desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+    .platform-hero__btns {
+      display: flex;
+      gap: 12px;
+    }
+    .btn-play-now {
+      background: #fff;
+      color: #0c0c0e;
+      border: 0;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn-play-now:hover {
+      background: #e6e6e6;
+      transform: translateY(-2px);
+    }
+    .btn-sec-action {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-sec-action:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Trilhas de Módulos */
+    .module-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--app-accent);
+      border-radius: 2px;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 18px;
+    }
+    .mod-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      background: var(--app-card);
+      border: 1px solid var(--app-border);
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s, box-shadow 0.2s;
+    }
+    .mod-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: rgba(255, 138, 61, 0.5);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+    }
+    .mod-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mod-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--app-accent);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+    .mod-lock {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(4px);
+      z-index: 2;
+    }
+    .mod-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(12, 12, 14, 0.9) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 14px;
+      opacity: 0.95;
+    }
+    .mod-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+    .mod-sub {
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Modal de Aula e Player */
+    .player-dialog {
+      border: 0;
+      background: transparent;
+      padding: 0;
+      max-width: 900px;
+      width: 92vw;
+      border-radius: 14px;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+      color: #fff;
+    }
+    .player-dialog::backdrop {
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+    }
+    .player-window {
+      background: #141418;
+      border: 1px solid var(--app-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .player-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--app-border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .player-head h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .player-close {
+      background: transparent;
+      border: 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 6px;
+    }
+    .player-close:hover {
+      color: #fff;
+    }
+    .player-video-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .player-video-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Visão do CRM */
+    .crm-stage-container {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .crm-stage-container.active {
+      display: flex;
+    }
+    .crm-header-card {
+      background: var(--app-surface);
+      border: 1px solid var(--app-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .crm-title-group h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .crm-title-group p {
+      margin: 0;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .crm-stat-badges {
+      display: flex;
+      gap: 16px;
+    }
+    .stat-badge {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--app-border);
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-align: right;
+    }
+    .stat-badge b {
+      display: block;
+      font-size: 18px;
+      color: #ff8a3d;
+    }
+    .stat-badge small {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .kanban-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .kanban-col {
+      background: var(--app-surface);
+      border: 1px solid var(--app-border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 480px;
+    }
+    .kanban-col-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--app-border);
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+    .kanban-col-count {
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .kanban-card {
+      background: var(--app-card);
+      border: 1px solid var(--app-border);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .kanban-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 138, 61, 0.4);
+    }
+    .kanban-card b {
+      font-size: 13.5px;
+    }
+    .kanban-card span {
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .kanban-tag {
+      align-self: flex-start;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .tag-free { background: rgba(58, 169, 255, 0.2); color: #5dadff; }
+    .tag-active { background: rgba(76, 212, 138, 0.2); color: #4cd48a; }
+    .tag-hot { background: rgba(232, 64, 47, 0.2); color: #ff5a3d; }
+    .tag-vip { background: linear-gradient(135deg, #e8402f, #ff8a3d); color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .kanban-grid { grid-template-columns: 1fr; }
+      .app-sidebar { display: none; }
+      .app-search { display: none; }
+    }
+  </style>
+</head>
+<body class="app-body">
+
+  <!-- Topbar do Aplicativo -->
+  <header class="app-topbar">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <a class="app-brand" href="/app.html">
+        <img class="app-logo" src="/images/header-logo.png" alt="Astron Members">
+        <span style="font-weight: 800; font-size: 14px; letter-spacing: 0.5px;">ASTRON <span style="color: #ff8a3d;">MEMBERS</span></span>
+      </a>
+      <span class="app-badge">Área de Membros</span>
+    </div>
+
+    <!-- Navegação de Abas da Plataforma -->
+    <nav class="app-nav">
+      <button class="app-tab-btn active" id="btn-tab-vitrine" type="button"><i class="fa-solid fa-film"></i> Vitrine & Cursos</button>
+      <button class="app-tab-btn" id="btn-tab-crm" type="button"><i class="fa-solid fa-table-columns"></i> CRM Nativo</button>
+    </nav>
+
+    <!-- Usuário & Voltar ao Site -->
+    <div class="app-user-area">
+      <div class="app-search">
+        <i class="fa-solid fa-magnifying-glass" style="opacity: 0.5;"></i>
+        <input type="text" placeholder="Buscar aulas...">
+      </div>
+
+      <div class="app-user-pill">
+        <div class="app-user-avatar">A</div>
+        <div class="app-user-meta">
+          <span class="app-user-name">Alex Silva</span>
+          <span class="app-user-role">Acesso Liberado</span>
+        </div>
+      </div>
+
+      <a class="app-home-link" href="/" title="Voltar ao site institucional">
+        <i class="fa-solid fa-arrow-left"></i> <span>Site</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Shell da Aplicação -->
+  <div class="app-shell">
+    <!-- Sidebar de Atalhos Rápidos -->
+    <aside class="app-sidebar">
+      <button class="app-side-btn active" id="side-btn-home" title="Início"><i class="fa-solid fa-house"></i></button>
+      <button class="app-side-btn" id="side-btn-crm" title="CRM"><i class="fa-solid fa-chart-pie"></i></button>
+      <button class="app-side-btn" id="side-btn-comm" title="Comunidade"><i class="fa-solid fa-users"></i></button>
+      <button class="app-side-btn" id="side-btn-cert" title="Certificados"><i class="fa-solid fa-award"></i></button>
+    </aside>
+
+    <!-- Conteúdo Dinâmico -->
+    <main class="app-content">
+
+      <!-- ============ VISÃO 1: VITRINE DE CURSOS ============ -->
+      <div id="view-vitrine" style="display: flex; flex-direction: column; gap: 32px;">
+        
+        <!-- Hero da Área de Membros -->
+        <section class="platform-hero">
+          <img class="hero-bg-cover" src="/images/banner-featured.webp" alt="Destaque da Área de Membros">
+          <div class="platform-hero__gradient"></div>
+          <div class="platform-hero__copy">
+            <span class="platform-hero__tag">Curso em Destaque</span>
+            <h1 class="platform-hero__title">Formação Completa do Infoprodutor</h1>
+            <p class="platform-hero__desc">Domine a criação, entrega de alta retenção, engajamento comunitário e esteira de produtos de alto LTV na Astron Members.</p>
+            <div class="platform-hero__btns">
+              <button class="btn-play-now" id="btn-hero-play" type="button"><i class="fa-solid fa-play"></i> Assistir Módulo 1 (Grátis)</button>
+              <button class="btn-sec-action" id="btn-hero-crm" type="button"><i class="fa-solid fa-table-columns"></i> Ver Alunos no CRM</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trilha 1: Seus Módulos Liberados -->
+        <section class="module-section">
+          <div class="section-head">
+            <h2 class="section-title">Seus Módulos</h2>
+            <span style="font-size: 13px; color: rgba(255,255,255,0.6);">6 Módulos Disponíveis</span>
+          </div>
+          <div class="module-grid">
+            
+            <!-- Módulo 1 Grátis / Liberado -->
+            <article class="mod-card" data-video="v-OnUJXrrHg" data-title="Módulo 1: Boas-Vindas e Primeiros Passos">
+              <span class="mod-badge">Grátis</span>
+              <img src="/images/module-01.jpg" alt="Módulo 1">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 01</h3>
+                <span class="mod-sub"><i class="fa-solid fa-circle-play" style="color: #4cd48a;"></i> Liberado · Assistir</span>
+              </div>
+            </article>
+
+            <!-- Módulo 2 -->
+            <article class="mod-card" data-video="JUhBoMR-YkU" data-title="Módulo 2: Configuração e Funil Automático">
+              <span class="mod-lock"><i class="fa-solid fa-lock"></i></span>
+              <img src="/images/module-02.jpg" alt="Módulo 2">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 02</h3>
+                <span class="mod-sub">Engajamento e Entrega</span>
+              </div>
+            </article>
+
+            <!-- Módulo 3 -->
+            <article class="mod-card" data-video="v-OnUJXrrHg" data-title="Módulo 3: Comunidade e Retenção">
+              <span class="mod-lock"><i class="fa-solid fa-lock"></i></span>
+              <img src="/images/module-03.jpg" alt="Módulo 3">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 03</h3>
+                <span class="mod-sub">Comunidades Ativas</span>
+              </div>
+            </article>
+
+            <!-- Módulo 4 -->
+            <article class="mod-card" data-video="JUhBoMR-YkU" data-title="Módulo 4: Upsell e Esteira de Produtos">
+              <span class="mod-lock"><i class="fa-solid fa-lock"></i></span>
+              <img src="/images/module-04.jpg" alt="Módulo 4">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 04</h3>
+                <span class="mod-sub">Aumento de LTV</span>
+              </div>
+            </article>
+
+            <!-- Módulo 5 -->
+            <article class="mod-card" data-video="v-OnUJXrrHg" data-title="Módulo 5: Proteção DRM e Vídeos Seguros">
+              <span class="mod-lock"><i class="fa-solid fa-lock"></i></span>
+              <img src="/images/module-05.jpg" alt="Módulo 5">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 05</h3>
+                <span class="mod-sub">Segurança Máxima</span>
+              </div>
+            </article>
+
+            <!-- Módulo 6 -->
+            <article class="mod-card" data-video="JUhBoMR-YkU" data-title="Módulo 6: Escala e Gestão Avançada">
+              <span class="mod-lock"><i class="fa-solid fa-lock"></i></span>
+              <img src="/images/module-06.jpg" alt="Módulo 6">
+              <div class="mod-overlay">
+                <h3 class="mod-title">Módulo 06</h3>
+                <span class="mod-sub">Escala Ilimitada</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Trilha 2: Produtos Recomendados (Upsell) -->
+        <section class="module-section">
+          <div class="section-head">
+            <h2 class="section-title">Cursos Complementares</h2>
+            <span style="font-size: 13px; color: rgba(255,255,255,0.6);">Aumente sua entrega</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px;">
+            <div style="background: var(--app-surface); border: 1px solid var(--app-border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+              <img src="/images/upsell-card-1.jpg" alt="Mentoria Individual" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+              <div style="padding: 16px;">
+                <span style="font-size: 11px; font-weight: 700; color: #ff8a3d; text-transform: uppercase;">Aceleração</span>
+                <h4 style="margin: 4px 0 12px; font-size: 15px;">Mentoria de Escala 1 a 1</h4>
+                <button class="btn-sec-action" style="width: 100%; padding: 10px;" onclick="alert('Módulo de demonstração: em breve disponível para compra.')">Conhecer Oferta</button>
+              </div>
+            </div>
+            <div style="background: var(--app-surface); border: 1px solid var(--app-border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+              <img src="/images/upsell-card-2.jpg" alt="Templates Prontos" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+              <div style="padding: 16px;">
+                <span style="font-size: 11px; font-weight: 700; color: #5dadff; text-transform: uppercase;">Recurso</span>
+                <h4 style="margin: 4px 0 12px; font-size: 15px;">Pack de Templates e Copys</h4>
+                <button class="btn-sec-action" style="width: 100%; padding: 10px;" onclick="alert('Módulo de demonstração: em breve disponível para compra.')">Conhecer Oferta</button>
+              </div>
+            </div>
+            <div style="background: var(--app-surface); border: 1px solid var(--app-border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+              <img src="/images/upsell-card-3.jpg" alt="Comunidade Mastermind" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+              <div style="padding: 16px;">
+                <span style="font-size: 11px; font-weight: 700; color: #4cd48a; text-transform: uppercase;">Exclusivo</span>
+                <h4 style="margin: 4px 0 12px; font-size: 15px;">Comunidade Mastermind VIP</h4>
+                <button class="btn-sec-action" style="width: 100%; padding: 10px;" onclick="alert('Módulo de demonstração: em breve disponível para compra.')">Conhecer Oferta</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ VISÃO 2: CRM NATIVO ============ -->
+      <div class="crm-stage-container" id="view-crm">
+        <div class="crm-header-card">
+          <div class="crm-title-group">
+            <h2>Pipelines de Alunos (CRM Nativo)</h2>
+            <p>Gerencie a jornada de cada aluno, do primeiro lead ao upsell de alto valor, sem depender de planilhas.</p>
+          </div>
+          <div class="crm-stat-badges">
+            <div class="stat-badge">
+              <b>128</b>
+              <small>Total Alunos</small>
+            </div>
+            <div class="stat-badge">
+              <b style="color: #4cd48a;">R$ 14.850</b>
+              <small>LTV Gerado</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="kanban-grid">
+          <!-- Coluna 1 -->
+          <div class="kanban-col">
+            <div class="kanban-col-head">
+              <span style="color: #5dadff;"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Novos Cadastros</span>
+              <span class="kanban-col-count">3</span>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-free">Free Lead</span>
+              <b>Alex Silva</b>
+              <span>alex.silva@email.com</span>
+              <small style="color: rgba(255,255,255,0.4); margin-top: 4px;">Cadastrou há 12 min</small>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-free">Free Lead</span>
+              <b>Mariana Costa</b>
+              <span>mariana.costa@gmail.com</span>
+              <small style="color: rgba(255,255,255,0.4); margin-top: 4px;">Cadastrou há 45 min</small>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-free">Free Lead</span>
+              <b>Rafael Souza</b>
+              <span>rafael.souza@outlook.com</span>
+              <small style="color: rgba(255,255,255,0.4); margin-top: 4px;">Cadastrou há 2h</small>
+            </div>
+          </div>
+
+          <!-- Coluna 2 -->
+          <div class="kanban-col">
+            <div class="kanban-col-head">
+              <span style="color: #4cd48a;"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Alunos Ativos</span>
+              <span class="kanban-col-count">2</span>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-active">Assistindo Módulo 1</span>
+              <b>Carla Vitti</b>
+              <span>carla.vitti@design.com</span>
+              <small style="color: #4cd48a; margin-top: 4px;">100% Módulo Concluído</small>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-active">Assistindo Módulo 1</span>
+              <b>Thiago Lima</b>
+              <span>thiago.lima@gestao.com</span>
+              <small style="color: #4cd48a; margin-top: 4px;">60% Módulo Concluído</small>
+            </div>
+          </div>
+
+          <!-- Coluna 3 -->
+          <div class="kanban-col">
+            <div class="kanban-col-head">
+              <span style="color: #ff8a3d;"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Alta Intenção</span>
+              <span class="kanban-col-count">2</span>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-hot">Tentou Módulo 2</span>
+              <b>Gabriel Juste</b>
+              <span>gabriel.juste@tech.com</span>
+              <small style="color: #ff8a3d; margin-top: 4px;">Clicou no Checkout 3x</small>
+            </div>
+            <div class="kanban-card">
+              <span class="kanban-tag tag-hot">Tentou Módulo 2</span>
+              <b>Murilo Henrique</b>
+              <span>murilo@agencia.com</span>
+              <small style="color: #ff8a3d; margin-top: 4px;">Visualizou Oferta</small>
+            </div>
+          </div>
+
+          <!-- Coluna 4 -->
+          <div class="kanban-col">
+            <div class="kanban-col-head">
+              <span style="color: #e8402f;"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Upsell Concluído</span>
+              <span class="kanban-col-count">2</span>
+            </div>
+            <div class="kanban-card" style="border-color: rgba(76, 212, 138, 0.4); background: rgba(76, 212, 138, 0.05);">
+              <span class="kanban-tag tag-vip">Mentoria VIP</span>
+              <b>Leonardo Karpinski</b>
+              <span>leonardo@powerbi.com</span>
+              <small style="color: #4cd48a; font-weight: 700; margin-top: 4px;">+ R$ 2.997,00</small>
+            </div>
+            <div class="kanban-card" style="border-color: rgba(76, 212, 138, 0.4); background: rgba(76, 212, 138, 0.05);">
+              <span class="kanban-tag tag-vip">Combo Cursos</span>
+              <b>Beatriz Mendez</b>
+              <span>beatriz@conteudo.com</span>
+              <small style="color: #4cd48a; font-weight: 700; margin-top: 4px;">+ R$ 597,00</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Modal do Player de Vídeo -->
+  <dialog class="player-dialog" id="app-player-dlg">
+    <div class="player-window">
+      <div class="player-head">
+        <h3 id="player-title">Aula: Boas-Vindas</h3>
+        <button class="player-close" id="player-close-btn" type="button">✕</button>
+      </div>
+      <div class="player-video-box" id="player-box"></div>
+    </div>
+  </dialog>
+
+  <script>
+    (function() {
+      // Alternância de Abas (Vitrine vs CRM)
+      var btnVitrine = document.getElementById("btn-tab-vitrine");
+      var btnCrm = document.getElementById("btn-tab-crm");
+      var sideHome = document.getElementById("side-btn-home");
+      var sideCrm = document.getElementById("side-btn-crm");
+      var viewVitrine = document.getElementById("view-vitrine");
+      var viewCrm = document.getElementById("view-crm");
+
+      function setTab(tab) {
+        if (tab === "crm") {
+          btnCrm.classList.add("active");
+          btnVitrine.classList.remove("active");
+          sideCrm.classList.add("active");
+          sideHome.classList.remove("active");
+          viewVitrine.style.display = "none";
+          viewCrm.classList.add("active");
+        } else {
+          btnVitrine.classList.add("active");
+          btnCrm.classList.remove("active");
+          sideHome.classList.add("active");
+          sideCrm.classList.remove("active");
+          viewVitrine.style.display = "flex";
+          viewCrm.classList.remove("active");
+        }
+      }
+
+      btnVitrine.addEventListener("click", function() { setTab("vitrine"); });
+      sideHome.addEventListener("click", function() { setTab("vitrine"); });
+      btnCrm.addEventListener("click", function() { setTab("crm"); });
+      sideCrm.addEventListener("click", function() { setTab("crm"); });
+      
+      var btnHeroCrm = document.getElementById("btn-hero-crm");
+      if (btnHeroCrm) btnHeroCrm.addEventListener("click", function() { setTab("crm"); });
+
+      // Player de Vídeo
+      var dlg = document.getElementById("app-player-dlg");
+      var box = document.getElementById("player-box");
+      var titleEl = document.getElementById("player-title");
+      var closeBtn = document.getElementById("player-close-btn");
+
+      function playVideo(ytId, title) {
+        titleEl.textContent = title;
+        box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0&playsinline=1" allow="autoplay; fullscreen" allowfullscreen></iframe>';
+        dlg.showModal();
+      }
+
+      function closeVideo() {
+        box.innerHTML = "";
+        dlg.close();
+      }
+
+      closeBtn.addEventListener("click", closeVideo);
+      dlg.addEventListener("click", function(e) { if (e.target === dlg) closeVideo(); });
+
+      document.querySelectorAll(".mod-card").forEach(function(card) {
+        card.addEventListener("click", function() {
+          var yt = card.getAttribute("data-video");
+          var title = card.getAttribute("data-title");
+          if (yt) playVideo(yt, title);
+        });
+      });
+
+      var btnHeroPlay = document.getElementById("btn-hero-play");
+      if (btnHeroPlay) {
+        btnHeroPlay.addEventListener("click", function() {
+          playVideo("v-OnUJXrrHg", "Módulo 1: Boas-Vindas e Primeiros Passos");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

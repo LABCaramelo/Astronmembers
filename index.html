@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astron Members | Plataforma de área de membros premium, para infoprodutores, EAD e cursos online.</title>
+  <meta name="description" content="A área de membros completa para captar, entregar e reter alunos.">
+  <meta name="theme-color" content="#191919">
+  <link rel="icon" href="/favicon/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Cabin:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fundo do hero: imagem atrás de um véu; a luz do mouse abre um furo no véu -->
+  <div class="bg" aria-hidden="true">
+    <img class="bg-img" src="/images/hero-bg.webp" srcset="/images/hero-bg-mobile.webp 960w, /images/hero-bg.webp 1951w" sizes="100vw" width="1951" height="920" fetchpriority="high" alt="">
+    <div class="bg-veil"></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="navbar" id="inicio">
+    <div class="navbar__inner">
+      <a class="logo" href="#inicio" aria-label="Página inicial da Astron Members">
+        <img class="logo-img" src="/images/header-logo.png" alt="">
+        <span class="logo-word"><b>ASTRON</b> MEMBERS</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <ul class="nav-list">
+          <li><button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega" data-panel="recursos"><span data-i18n="nav.recursos">Recursos</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></button></li>
+          <li><button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega" data-panel="integracoes"><span data-i18n="nav.integracoes">Integrações</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></button></li>
+          <li><button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega" data-panel="ecossistema"><span data-i18n="nav.ecossistema">Ecossistema</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></button></li>
+          <li><a class="nav-link" href="#planos" data-i18n="nav.planos">Planos</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-icon" href="https://play.google.com/store/apps/details?id=com.gusgio.astronmembersmobile&hl=pt_BR&gl=US" target="_blank" rel="noopener" aria-label="Google Play"><i class="fa-brands fa-google-play"></i></a>
+        <a class="nav-icon" href="https://apps.apple.com/br/app/astron-members/id6450926255" target="_blank" rel="noopener" aria-label="App Store"><i class="fa-brands fa-apple"></i></a>
+        <div class="lang" id="lang">
+          <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma">
+            <img class="lang__flag" src="/images/bandeiras/br.webp" alt="">
+            <i class="fa-solid fa-chevron-down nav-chevron"></i>
+          </button>
+          <ul class="lang__menu" id="lang-menu" role="listbox">
+            <li><button class="lang__opt" type="button" data-lang="pt-BR" data-flag="br"><img src="/images/bandeiras/br.webp" alt=""><span>Português</span></button></li>
+            <li><button class="lang__opt" type="button" data-lang="en" data-flag="us"><img src="/images/bandeiras/us.webp" alt=""><span>English</span></button></li>
+            <li><button class="lang__opt" type="button" data-lang="es" data-flag="es"><img src="/images/bandeiras/es.webp" alt=""><span>Español</span></button></li>
+            <li><button class="lang__opt" type="button" data-lang="fr" data-flag="fr"><img src="/images/bandeiras/fr.webp" alt=""><span>Français</span></button></li>
+          </ul>
+        </div>
+        <a class="btn btn--primary" href="/app.html" data-i18n="nav.ingressar">Ingressar</a>
+      </div>
+
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mega-menu: um único painel com a largura do header; o conteúdo de cada aba é montado por main.js -->
+    <div class="mega" id="mega" role="region" aria-label="Submenu">
+      <span class="mega__caret" aria-hidden="true"></span>
+      <div class="mega__clip">
+        <div class="mega-panel" data-panel="recursos" data-title="Recursos">
+          <div class="mega-body">
+            <div class="mega-cols" id="mega-recursos"></div>
+            <aside class="mega-aside">
+              <p class="mega-aside__title">Recursos que amamos</p>
+              <p class="mega-aside__text">Veja em detalhe tudo o que a Astron Members entrega para o seu negócio.</p>
+              <a class="mega-cta" href="/recursos/">Ver todos os recursos <i class="fa-solid fa-chevron-right"></i></a>
+            </aside>
+          </div>
+        </div>
+        <div class="mega-panel" data-panel="integracoes" data-title="Integrações">
+          <div class="mega-body">
+            <div class="mega-cols mega-cols--int" id="mega-integracoes"></div>
+            <aside class="mega-aside mega-aside--media">
+              <img class="mega-aside__img" src="/images/integracoes-card.jpg" alt="">
+              <p class="mega-aside__title">Apps e Integrações</p>
+              <p class="mega-aside__text">Conecte a sua plataforma de vendas, pagamentos, vídeo e marketing.</p>
+              <a class="mega-cta" href="#integracoes">Ver todas as integrações <i class="fa-solid fa-chevron-right"></i></a>
+            </aside>
+          </div>
+        </div>
+        <div class="mega-panel" data-panel="ecossistema" data-title="Ecossistema">
+          <div class="mega-body">
+            <div class="mega-cols" id="mega-ecossistema"></div>
+            <aside class="mega-aside">
+              <p class="mega-aside__title">Sou produtor</p>
+              <p class="mega-aside__text">Acesse a Central do Produtor e gerencie o seu club.</p>
+              <a class="mega-cta" href="https://central.astronmembers.com.br?on=members">Entrar na Central <i class="fa-solid fa-chevron-right"></i></a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile (drill-down): os níveis são clonados dos painéis do mega-menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu" hidden>
+    <div class="mm-viewport">
+      <div class="mm-level mm-root is-active" data-level="root">
+        <button class="mm-item" type="button" data-open-level="recursos">Recursos <i class="fa-solid fa-chevron-right"></i></button>
+        <button class="mm-item" type="button" data-open-level="integracoes">Integrações <i class="fa-solid fa-chevron-right"></i></button>
+        <button class="mm-item" type="button" data-open-level="ecossistema">Ecossistema <i class="fa-solid fa-chevron-right"></i></button>
+        <a class="mm-item" href="#planos">Planos</a>
+        <div class="mm-actions">
+          <a class="btn btn--primary" href="/app.html">Ingressar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__inner container">
+        <p class="tagline" data-i18n="hero.tagline">Mais de 10.000 negócios já pararam de perder lead pra internet.</p>
+        <h1 class="headline" data-i18n-html="hero.title">A área de membros completa <br> para captar, entregar <br> e reter alunos</h1>
+
+        <form class="signup-row" id="hero-signup">
+          <div class="signup-field">
+            <input type="email" name="email" placeholder="Insira seu email" aria-label="E-mail" autocomplete="email" data-i18n-ph="hero.email">
+            <button class="btn btn--cta" type="submit" data-i18n="hero.criar">Criar Conta</button>
+          </div>
+          <a class="btn btn--google" href="/app.html">
+            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 38.2 44 33 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+            <span data-i18n="hero.google">Criar Conta com o Google</span>
+          </a>
+        </form>
+
+        <p class="hero-tabs-label" data-i18n="hero.eco">Um ecossistema completo</p>
+        <div class="hero-tabs" id="hero-tabs" role="tablist" aria-label="Demonstração">
+          <button class="hero-tab active" type="button" role="tab" aria-selected="true" data-view="captacao" style="--tab:#3aa9ff">Captação de Usuários<span class="hero-tab__bar"><span class="hero-tab__fill"></span></span></button>
+          <button class="hero-tab" type="button" role="tab" aria-selected="false" data-view="area" style="--tab:#ff8a3d">Área de Membros<span class="hero-tab__bar"><span class="hero-tab__fill"></span></span></button>
+          <button class="hero-tab" type="button" role="tab" aria-selected="false" data-view="crm" style="--tab:#f2a73b">CRM Nativo<span class="hero-tab__bar"><span class="hero-tab__fill"></span></span></button>
+          <button class="hero-tab" type="button" role="tab" aria-selected="false" data-view="ltv" style="--tab:#4cd48a">Retenção e LTV<span class="hero-tab__bar"><span class="hero-tab__fill"></span></span></button>
+        </div>
+        <p class="hero-tabs-caption" id="hero-tabs-caption" aria-live="polite">Ele preenche o cadastro e libera o acesso na hora</p>
+      </div>
+    </section>
+
+    <!-- ============ MOCKUP DA ÁREA DE MEMBROS ============ -->
+    <section class="dash" aria-label="Demonstração da área de membros">
+      <div class="dash__frame" id="dash-frame">
+        <span class="dash__badge">Demonstração fiel</span>
+
+        <!-- balões de onboarding (um por aba), posicionados por main.js -->
+        <div class="ob">
+          <div class="ob-bubble" data-ob="captacao"><span class="ob-arrow"></span><span class="ob-step"><b>1</b> / 4</span><p class="ob-title">Captação de Usuários</p><p class="ob-desc">Ele preenche o cadastro e libera o acesso na hora.</p><button class="ob-next" type="button">Próximo <i>→</i></button></div>
+          <div class="ob-bubble" data-ob="area"><span class="ob-arrow"></span><span class="ob-step"><b>2</b> / 4</span><p class="ob-title">Área de Membros</p><p class="ob-desc">Ele entra e já é recebido dentro do seu catálogo de cursos.</p><button class="ob-next" type="button">Próximo <i>→</i></button></div>
+          <div class="ob-bubble" data-ob="crm"><span class="ob-arrow"></span><span class="ob-step"><b>3</b> / 4</span><p class="ob-title">CRM Nativo</p><p class="ob-desc">Cada ação do aluno move o card de estágio, sem planilha.</p><button class="ob-next" type="button">Próximo <i>→</i></button></div>
+          <div class="ob-bubble" data-ob="ltv"><span class="ob-arrow"></span><span class="ob-step"><b>4</b> / 4</span><p class="ob-title">Retenção e LTV</p><p class="ob-desc">Ele entrou pagando R$30 e já comprou R$300 em cursos.</p><button class="ob-next" type="button">Recomeçar <i>→</i></button></div>
+        </div>
+
+        <div class="dash__panel">
+          <div class="dash-topbar">
+            <div class="dash-brand">
+              <img class="dash-logo-box" src="/images/logo-box.png" alt="">
+              <span class="dash-brand-name">ASTRON <br>ÁREA DE MEMBROS</span>
+            </div>
+            <div class="dash-search"><i class="fa-solid fa-magnifying-glass"></i><span>Pesquisar cursos e aulas...</span></div>
+            <div class="dash-top-actions">
+              <i class="fa-regular fa-bell"></i>
+              <span class="dash-user"><span class="dash-avatar"></span>Alex <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+          </div>
+
+          <div class="dash-body">
+            <aside class="dash-sidebar">
+              <span class="dash-profile"><i class="fa-regular fa-user"></i></span>
+              <nav class="dash-nav" aria-hidden="true">
+                <span class="dash-nav-item active"><i class="fa-solid fa-house"></i></span>
+                <span class="dash-nav-item"><i class="fa-regular fa-user"></i></span>
+                <span class="dash-nav-item"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span class="dash-nav-item"><i class="fa-regular fa-message"></i></span>
+                <span class="dash-nav-item"><i class="fa-solid fa-user-group"></i></span>
+                <span class="dash-nav-item"><i class="fa-solid fa-award"></i></span>
+              </nav>
+            </aside>
+
+            <div class="dash-main">
+              <!-- 1. Captação: cadastro libera o acesso -->
+              <div class="dash-view active" data-view="captacao">
+                <form class="signup-card" id="signup-card">
+                  <h4>Crie sua conta grátis</h4>
+                  <span class="signup-card__rule"></span>
+                  <label class="signup-card__label" for="demo-name">Nome completo</label>
+                  <div class="signup-card__input"><i class="fa-regular fa-user"></i><input id="demo-name" type="text" placeholder="Seu nome" autocomplete="off"></div>
+                  <label class="signup-card__label" for="demo-email">E-mail</label>
+                  <div class="signup-card__input"><i class="fa-regular fa-envelope"></i><input id="demo-email" type="email" placeholder="seu@email.com" autocomplete="off" required></div>
+                  <button class="signup-card__btn" id="demo-signup" type="submit">Criar conta grátis</button>
+                </form>
+              </div>
+
+              <!-- 2. Área de membros: vitrine com módulos -->
+              <div class="dash-view" data-view="area" hidden>
+                <div class="dash-banner">
+                  <img src="/images/banner-featured.webp" alt="">
+                </div>
+                <div class="dash-row-head">
+                  <h5>Seus módulos</h5>
+                  <div class="dash-arrows" data-target="module-row">
+                    <button type="button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+                </div>
+                <p class="dash-note">Seu lead acessa conteúdo de valor de graça. Como ele já deixou o cadastro, você já pode gerenciar ele nos pipelines. Nosso funil é inteligente.</p>
+                <div class="module-row" id="module-row">
+                  <button class="module-card" type="button" aria-label="Módulo 1 grátis — acompanhar no CRM"><img src="/images/module-01.jpg" alt="Módulo 1"><span class="module-badge">Grátis</span></button>
+                  <button class="module-card is-locked" type="button" aria-label="Módulo 2 — acompanhar no CRM"><img src="/images/module-02.jpg" alt="Módulo 2"><span class="module-lock"><i class="fa-solid fa-lock"></i></span></button>
+                  <button class="module-card is-locked" type="button" aria-label="Módulo 3 — acompanhar no CRM"><img src="/images/module-03.jpg" alt="Módulo 3"><span class="module-lock"><i class="fa-solid fa-lock"></i></span></button>
+                  <button class="module-card is-locked" type="button" aria-label="Módulo 4 — acompanhar no CRM"><img src="/images/module-04.jpg" alt="Módulo 4"><span class="module-lock"><i class="fa-solid fa-lock"></i></span></button>
+                  <button class="module-card is-locked" type="button" aria-label="Módulo 5 — acompanhar no CRM"><img src="/images/module-05.jpg" alt="Módulo 5"><span class="module-lock"><i class="fa-solid fa-lock"></i></span></button>
+                  <button class="module-card is-locked" type="button" aria-label="Módulo 6 — acompanhar no CRM"><img src="/images/module-06.jpg" alt="Módulo 6"><span class="module-lock"><i class="fa-solid fa-lock"></i></span></button>
+                </div>
+              </div>
+
+              <!-- 3. CRM nativo: pipelines -->
+              <div class="dash-view" data-view="crm" hidden>
+                <p class="pipe-crumb"><i class="fa-solid fa-gear"></i> Administrador <span>›</span> Pipelines <span>›</span> <b>Atender novos alunos FREE</b></p>
+                <h4 class="pipe-title">Atender novos alunos FREE</h4>
+                <div class="pipe-board" id="pipe-board"></div>
+              </div>
+
+              <!-- 4. Retenção e LTV: venda realizada -->
+              <div class="dash-view" data-view="ltv" hidden>
+                <div class="sale">
+                  <span class="sale__icon" id="sale-icon"><i class="fa-solid fa-check"></i></span>
+                  <p class="sale__title">Venda realizada</p>
+                  <p class="sale__stat">Entrou pagando <strong>R$ 30</strong> <i class="fa-solid fa-arrow-right"></i> já comprou <strong class="is-acc">R$ 300</strong> em cursos</p>
+                  <ul class="sale__covers">
+                    <li><img src="/images/module-01.jpg" alt=""><span>✓</span></li>
+                    <li><img src="/images/module-02.jpg" alt=""><span>✓</span></li>
+                    <li><img src="/images/module-04.jpg" alt=""><span>✓</span></li>
+                    <li><img src="/images/module-05.jpg" alt=""><span>✓</span></li>
+                    <li><img src="/images/module-06.jpg" alt=""><span>✓</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ECOSSISTEMA ============ -->
+    <section class="tsum" id="ecossistema">
+      <div class="container">
+        <p class="kicker">Um ecossistema completo</p>
+        <h2 class="h2">Tudo que você precisa, numa ferramenta só</h2>
+        <p class="sub">Capte, entregue, gerencie e venda mais, tudo nativo dentro da Astron. Sem plugin, sem integração externa, sem gastar mais em tráfego.</p>
+        <div class="carousel tsum__carousel">
+          <ul class="tsum__row hscroll" id="tsum-row"></ul>
+        </div>
+        <div class="arrows" data-target="tsum-row">
+          <button type="button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NÃO FRAGMENTA ============ -->
+    <section class="fragment">
+      <div class="container">
+        <div class="fragment__copy" data-reveal>
+          <p class="kicker">Pois você</p>
+          <h2 class="h2 h2--sm">Não fragmenta o caminho do Lead</h2>
+          <p class="sub sub--narrow">Cada etapa nova é uma chance do Lead se distrair e você perder o rastro dele, pagando tráfego de novo pra tentar vender outra vez.</p>
+        </div>
+
+        <div class="leak">
+          <div class="leak__stage" data-reveal>
+            <span class="leak__count">100 <small>Leads</small></span>
+            <p class="leak__label">Clicam no seu anúncio</p>
+          </div>
+          <div class="leak__gap"><span>-40%</span></div>
+          <div class="leak__stage" data-reveal data-reveal-delay="120">
+            <span class="leak__count">60 <small>Leads</small></span>
+            <p class="leak__label">Se espalham em 3 lugares diferentes</p>
+            <div class="leak__chips"><span>Landing Page</span><span>Rede Social</span><span>LinkTree</span></div>
+          </div>
+          <div class="leak__gap"><span>-55%</span></div>
+          <div class="leak__stage" data-reveal data-reveal-delay="240">
+            <span class="leak__count">27 <small>Leads</small></span>
+            <p class="leak__label">Seguem pra mais 5 links soltos</p>
+            <div class="leak__chips"><span>VSL</span><span>Checkout</span><span>Área de Membros</span><span>Comunidades</span><span>Promoção</span></div>
+          </div>
+          <div class="leak__gap"><span>-67%</span></div>
+          <div class="leak__stage leak__stage--end" data-reveal data-reveal-delay="360">
+            <span class="leak__count">9 <small>Leads</small></span>
+            <p class="leak__label">Chegam numa possível venda</p>
+          </div>
+        </div>
+
+        <p class="fragment__bridge" data-reveal>Com a Astron, seu Lead não sai desse caminho. <span>Mas como?</span></p>
+      </div>
+    </section>
+
+    <!-- ============ FUNIL (HUB) ============ -->
+    <section class="hub" id="funil">
+      <div class="container">
+        <div class="hub__intro">
+          <p class="hub__kicker">Do clique à venda, dentro da Astron</p>
+          <h2 class="hub__title">O Lead consome desde o primeiro clique</h2>
+          <p class="hub__subtitle">Veja como a captação vira conversão, e a conversão vira engajamento, em seis passos, sem o lead trocar de tela.</p>
+        </div>
+
+        <div class="hub__scene" id="hub-scene">
+          <svg class="hub__beams" id="hub-beams" aria-hidden="true"></svg>
+
+          <div class="hub__core">
+            <div class="hub__stage" id="hub-stage">
+              <span class="hub__ring hub__ring--1"></span>
+              <span class="hub__ring hub__ring--2"></span>
+              <span class="hub__ring hub__ring--3"></span>
+              <span class="hub__orbit"><span class="hub__dot"></span></span>
+              <span class="hub__burst"></span>
+              <div class="hub__ball"><span class="hub__logo"><img src="/images/astron-mark.png" alt="Astron"></span></div>
+            </div>
+            <p class="hub__label">Seu lead com um clique</p>
+            <p class="hub__sale"><i class="fa-solid fa-circle-check"></i> Venda realizada</p>
+          </div>
+
+          <ol class="hub__steps">
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">1</span><span class="hub-step__tag">Captação</span></div>
+              <h3 class="hub-step__title">Do anúncio direto para a sua área</h3>
+              <div class="hub-step__mock">
+                <div class="hs-row">
+                  <span class="hs-thumb"><img src="/images/ad-creative.jpg" alt=""><span class="hs-chip">Anúncio</span></span>
+                  <i class="fa-solid fa-arrow-right hs-arrow"></i>
+                  <span class="hs-pill"><i class="fa-solid fa-check"></i> Lead cadastrado</span>
+                </div>
+              </div>
+              <p class="hub-step__text">O clique no anúncio já cadastra o lead dentro da área de membros.</p>
+            </li>
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">2</span><span class="hub-step__tag">Aula grátis</span></div>
+              <h3 class="hub-step__title">Ele assiste e se cadastra</h3>
+              <div class="hub-step__mock">
+                <div class="hs-video"><img src="/images/lesson-video-frame.webp" alt=""><span class="hs-play"><i class="fa-solid fa-play"></i></span><span class="hs-chip hs-chip--float">Preencha e assista</span></div>
+              </div>
+              <p class="hub-step__text">Uma aula liberada como isca: o lead consome antes mesmo de comprar.</p>
+            </li>
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">3</span><span class="hub-step__tag">Engajamento</span></div>
+              <h3 class="hub-step__title">Comunidade e feed desde o início</h3>
+              <div class="hub-step__mock">
+                <div class="hs-post"><img class="hs-avatar" src="/images/avatar-1.jpg" alt=""><span class="hs-post__body"><b>Novo post no feed</b><i></i><i></i></span><i class="fa-regular fa-heart hs-heart"></i></div>
+              </div>
+              <p class="hub-step__text">Ele vê os posts dos outros membros e já quer fazer parte do seu infoproduto.</p>
+            </li>
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">4</span><span class="hub-step__tag">Venda</span></div>
+              <h3 class="hub-step__title">Compra direta com link de checkout sem sair da plataforma</h3>
+              <div class="hub-step__mock">
+                <div class="hs-buy"><span class="hs-cover"><img src="/images/upsell-card-3.jpg" alt=""></span><span class="hs-buy__side"><span class="hs-btn">Comprar</span><small>Cartão · Pix · Boleto</small></span></div>
+              </div>
+              <p class="hub-step__text">Oferta e checkout no mesmo ambiente: cartão, Pix e boleto.</p>
+            </li>
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">5</span><span class="hub-step__tag">Upsell</span></div>
+              <h3 class="hub-step__title">A oferta certa, na hora certa</h3>
+              <div class="hub-step__mock">
+                <div class="hs-buy"><span class="hs-cover"><img src="/images/upsell-card-1.jpg" alt=""></span><span class="hs-buy__side"><span class="hs-chip hs-chip--solid">Perfeito para você</span><small>+ ticket médio</small></span></div>
+              </div>
+              <p class="hub-step__text">Aumente o ticket médio com o mesmo cliente, sem gastar mais em tráfego.</p>
+            </li>
+            <li class="hub-step" tabindex="0">
+              <div class="hub-step__head"><span class="hub-step__num">6</span><span class="hub-step__tag">Retenção</span></div>
+              <h3 class="hub-step__title">Aluno engajado, menos cancelamentos</h3>
+              <div class="hub-step__mock">
+                <div class="hs-ret"><span class="hs-ret__row"><span>Módulo 4 de 6</span><b>80%</b></span><span class="hs-progress"><span></span></span><span class="hs-cert"><i class="fa-solid fa-award"></i> Certificado emitido</span></div>
+              </div>
+              <p class="hub-step__text">Módulos, certificados, comunidade e app mantêm o aluno por perto.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREÇO POR LEAD ATIVO ============ -->
+    <section class="pslider" id="precos">
+      <div class="container pslider__inner">
+        <div class="pslider__copy" data-reveal>
+          <h2 class="h2 h2--xl">Na Astron você paga <br>apenas por usuário ativo <br>no último mês</h2>
+          <p class="sub sub--narrow">Selecione o quanto de Leads você tem entrando no seu ecossistema, pague apenas pelo quanto você utiliza.</p>
+          <p class="sub sub--narrow">Se o Lead não acessar mais, você não pagará por ele</p>
+        </div>
+
+        <div class="pslider__card" data-reveal>
+          <div class="pslider__top">
+            <h3 class="pslider__title" id="pricing-tier-name">Eu tenho <strong>200</strong> Leads entrando na minha base</h3>
+            <span class="pslider__badge is-hidden" id="pricing-badge">Mais popular</span>
+          </div>
+          <p class="pslider__price"><span id="pricing-price-value">R$ 0,74</span> <small id="pricing-price-suffix">/lead</small></p>
+          <p class="pslider__line" id="pricing-leads-line">Até <strong id="pricing-leads-value">200</strong> <span id="pricing-leads-word">Leads</span> nos últimos 30 dias</p>
+          <p class="pslider__line" id="pricing-plan-line">Plano Starter · R$ 147,00 por mês</p>
+          <div class="pslider__slider">
+            <div class="pslider__track">
+              <div class="pslider__fill" id="pricing-slider-fill"></div>
+              <div class="pslider__dots"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <input class="pslider__input" id="pricing-slider" type="range" min="0" max="1000" value="696" aria-label="Quantidade de leads ativos">
+          </div>
+          <a class="pslider__cta" href="#planos">Ver esse plano</a>
+          <p class="pslider__fine">*Cobramos apenas por membros ativos nos últimos 30 dias, sem taxa por venda, sem surpresa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FATURA MÊS A MÊS ============ -->
+    <section class="paylead">
+      <div class="container paylead__inner">
+        <div class="paylead__copy" data-reveal>
+          <h2 class="h2 h2--xl">E isso aparece na sua fatura, <br>mês a mês</h2>
+          <p class="sub sub--narrow">Se num mês seus Leads ativos caem, sua fatura cai junto. Se sobem, o investimento acompanha. Sem contrato fixo, sem multa, sem pagar por quem já foi embora.</p>
+        </div>
+        <div class="paylead__chart" data-reveal>
+          <div class="paylead__months"><span>Jan/01</span><span>Fev/01</span><span>Mar/01</span><span>Abr/01</span><span>Mai/01</span><span>Jun/01</span></div>
+          <div class="paylead__plot" id="paylead-plot">
+            <span class="paylead__y" style="top:0">2.000 Leads</span>
+            <span class="paylead__y" style="top:33.3%">1.000 Leads</span>
+            <span class="paylead__y" style="top:66.6%">500 Leads</span>
+            <span class="paylead__y" style="top:100%">200 Leads</span>
+            <svg class="paylead__svg" id="paylead-svg" viewBox="0 0 600 240" preserveAspectRatio="none" aria-hidden="true">
+              <g class="paylead__grid">
+                <line x1="0" y1="0" x2="0" y2="240"/><line x1="120" y1="0" x2="120" y2="240"/><line x1="240" y1="0" x2="240" y2="240"/><line x1="360" y1="0" x2="360" y2="240"/><line x1="480" y1="0" x2="480" y2="240"/><line x1="600" y1="0" x2="600" y2="240"/>
+                <line x1="0" y1="0" x2="600" y2="0"/><line x1="0" y1="80" x2="600" y2="80"/><line x1="0" y1="160" x2="600" y2="160"/><line x1="0" y1="240" x2="600" y2="240"/>
+              </g>
+              <polyline id="paylead-line-invest" class="paylead__line paylead__line--invest" points=""/>
+              <polyline id="paylead-line-leads" class="paylead__line paylead__line--leads" points=""/>
+              <g id="paylead-cursor" class="paylead__cursor" visibility="hidden">
+                <line id="paylead-cursor-line" x1="0" y1="0" x2="0" y2="240"/>
+                <circle id="paylead-dot-invest" class="paylead__dot paylead__dot--invest" r="5"/>
+                <circle id="paylead-dot-leads" class="paylead__dot paylead__dot--leads" r="5"/>
+              </g>
+            </svg>
+            <div class="paylead__legend">
+              <span class="paylead__legend-item paylead__legend-item--leads">Seus Leads ativos</span>
+              <span class="paylead__legend-item paylead__legend-item--invest">Seu investimento</span>
+            </div>
+            <div class="paylead__tooltip" id="paylead-tooltip" hidden>
+              <span class="paylead__tt-value" id="paylead-tt-value">R$ 0,00</span>
+              <span class="paylead__tt-label" id="paylead-tt-label">custo por lead</span>
+              <span class="paylead__tt-divider"></span>
+              <span class="paylead__tt-value paylead__tt-value--leads" id="paylead-tt-leads">0</span>
+              <span class="paylead__tt-label">leads ativos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seam" aria-hidden="true"></div>
+
+    <!-- ============ NÚMEROS ============ -->
+    <section class="proof" id="numeros">
+      <div class="container">
+        <header class="proof__head">
+          <div>
+            <h2 class="h2">Números que sustentam a Astron.</h2>
+            <p class="sub sub--mid">Mais de 5.000.000 de usuários impactados, eleita a melhor área de membros do Brasil em 2022, e um CAC que cai conforme sua base cresce.</p>
+          </div>
+          <div class="proof__actions">
+            <a class="btn btn--red-lg" href="https://central.astronmembers.com.br/cadastrar?on=members">Quero ser Astron</a>
+            <a class="btn btn--outline-lg" href="mailto:relacionamento@astronmembers.com.br">Falar com um especialista <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+          </div>
+        </header>
+
+        <div class="proof__grid">
+          <div class="proof__card proof__story" data-reveal>
+            <p class="proof__label proof__label--center"><span>✦</span> Nossa história <span>✦</span></p>
+            <div class="proof__timeline">
+              <div class="proof__row"><span class="proof__year">2019</span><span class="proof__ico proof__ico--rocket"><i class="fa-solid fa-rocket"></i></span><span class="proof__role">Pioneira</span><span class="proof__detail">1ª área de membros estilo streaming</span></div>
+              <div class="proof__row"><span class="proof__year">2022</span><span class="proof__ico proof__ico--trophy"><i class="fa-solid fa-trophy"></i></span><span class="proof__role">Premiada</span><span class="proof__detail">Melhor Área de Membros do Brasil</span></div>
+              <div class="proof__row"><span class="proof__year">Hoje</span><span class="proof__ico proof__ico--trend"><i class="fa-solid fa-arrow-trend-up"></i></span><span class="proof__role">Escala</span><span class="proof__detail">5.000.000+ usuários impactados</span></div>
+              <div class="proof__row"><span class="proof__year">Sempre</span><span class="proof__ico proof__ico--support"><i class="fa-solid fa-headset"></i></span><span class="proof__role">Suporte exclusivo</span><span class="proof__detail">Gerente de conta dedicado</span></div>
+            </div>
+          </div>
+          <div class="proof__col">
+            <div class="proof__card proof__cac" data-reveal data-reveal-delay="100">
+              <p class="proof__label"><span>✦</span> Por que funciona</p>
+              <p class="proof__cac-figure">Seu CAC pode reduzir <strong>até 60%</strong></p>
+              <p class="proof__cac-sub">Isso acontece porque o mesmo Lead gera mais de uma venda sem tráfego novo: ele compra, é retido dentro da área de membros e recebe upsell automático. O custo do primeiro clique se divide entre todas as vendas seguintes.</p>
+            </div>
+            <div class="proof__card proof__stat" data-reveal data-reveal-delay="200">
+              <i class="fa-solid fa-user-group proof__stat-ico" aria-hidden="true"></i>
+              <span class="proof__stat-figure">5M+</span>
+              <span class="proof__stat-caption">usuários impactados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APP / VITRINE ============ -->
+    <section class="showcase" id="vitrine">
+      <div class="container">
+        <div class="showcase__card">
+          <img class="showcase__bg" src="/images/vitrine-bg-still.webp" alt="">
+          <div class="showcase__content">
+            <p class="showcase__kicker">No bolso do seu aluno</p>
+            <span class="showcase__devices" aria-hidden="true"><i class="fa-solid fa-tv"></i><i class="fa-solid fa-mobile-screen"></i><i class="fa-solid fa-tablet-screen-button"></i><i class="fa-solid fa-desktop"></i></span>
+            <h2 class="showcase__headline">A Astron com você <br><strong>e seu negócio</strong><br><strong>24/7</strong></h2>
+            <div class="showcase__stores">
+              <a class="showcase__store" href="https://apps.apple.com/br/app/astron-members/id6450926255" target="_blank" rel="noopener"><i class="fa-brands fa-apple"></i> Apple Store</a>
+              <a class="showcase__store showcase__store--play" href="https://play.google.com/store/apps/details?id=com.gusgio.astronmembersmobile&hl=pt_BR&gl=US" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Play Store</a>
+            </div>
+            <p class="showcase__sub">Seu negócio, no bolso do cliente, a um toque de distância, e também na tela da TV.</p>
+            <a class="showcase__link" href="/recursos/aplicativo.html">Quero meu app <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="marquee-mask showcase__marquee-mask">
+          <div class="marquee showcase__marquee" id="logo-marquee"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PÓS-VENDA ============ -->
+    <section class="postsale">
+      <div class="container">
+        <h2 class="postsale__headline" data-reveal>E como eu <em>lucro mais</em> com o mesmo cliente?</h2>
+        <span class="postsale__line" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- ============ UPSELL ============ -->
+    <section class="upsell">
+      <div class="container">
+        <div class="upsell__panel">
+          <div class="upsell__noise" aria-hidden="true"></div>
+          <div class="upsell__body">
+            <div class="upsell__copy">
+              <h2 class="upsell__headline" data-reveal>Aumente o seu LTV sem precisar gastar mais em tráfego!</h2>
+              <p class="upsell__split" data-reveal data-reveal-delay="100">O Upsell é pensado de forma estratégica, aumentando seu ticket médio com o mesmo cliente, sem gastar mais em tráfego.</p>
+              <a class="upsell__google" href="https://central.astronmembers.com.br/cadastrar?on=members" data-reveal data-reveal-delay="200">Experimente grátis</a>
+            </div>
+            <div class="upsell__gallery">
+              <!-- A faixa "Produto perfeito para você" e o botão "Desbloquear" já vêm desenhados nas imagens -->
+              <ul class="upsell__cards">
+                <li class="upsell__card" data-reveal><span class="upsell__card-fire" aria-hidden="true">🔥</span><div class="upsell__card-frame"><img src="/images/upsell-card-1.jpg" alt="" loading="lazy"></div></li>
+                <li class="upsell__card" data-reveal data-reveal-delay="120"><span class="upsell__card-fire" aria-hidden="true">🔥</span><div class="upsell__card-frame"><img src="/images/upsell-card-2.jpg" alt="" loading="lazy"></div></li>
+                <li class="upsell__card" data-reveal data-reveal-delay="240"><span class="upsell__card-fire" aria-hidden="true">🔥</span><div class="upsell__card-frame"><img src="/images/upsell-card-3.jpg" alt="" loading="lazy"></div></li>
+              </ul>
+              <ul class="upsell__notices" data-reveal data-reveal-delay="300">
+                <li class="upsell__notice upsell__notice--1"><img class="upsell__notice-avatar" src="/images/avatar-2.jpg" alt=""><span><strong>Perfeito para o Alex!</strong> Ele assistiu 2 vezes o módulo 2</span></li>
+                <li class="upsell__notice upsell__notice--2"><img class="upsell__notice-avatar" src="/images/avatar-1.jpg" alt=""><span><strong>Perfeito para você.</strong> Conteúdo adicional do módulo 2</span></li>
+                <li class="upsell__notice upsell__notice--3"><img class="upsell__notice-avatar" src="/images/avatar-3.jpg" alt=""><span>Pelos gostos dele, o Alex tem <strong>60%</strong> de chance de comprar esse conteúdo extra</span></li>
+              </ul>
+            </div>
+            <div class="upsell__foot">
+              <a class="upsell__link" href="#ferramentas">Veja todas as Ferramentas <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FERRAMENTAS ============ -->
+    <section class="tools" id="ferramentas">
+      <div class="container">
+        <div class="tools__head">
+          <span class="chip-label" data-reveal>Ferramentas</span>
+          <h2 class="h2" data-reveal>Todas as ferramentas</h2>
+        </div>
+        <div class="tools__bottom">
+          <p class="sub sub--mid" data-reveal>Tudo que você precisa pra captar, converter e reter, nativo dentro da Astron, sem plugin, sem integração externa, sem gastar mais em tráfego.</p>
+          <a class="btn btn--red-lg" href="https://central.astronmembers.com.br/cadastrar?on=members">Criar Conta</a>
+        </div>
+        <div class="carousel tools__carousel">
+          <div class="tools__row hscroll" id="tools-row"></div>
+        </div>
+        <div class="arrows" data-target="tools-row">
+          <button type="button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="tools__allbar" data-reveal>
+          <ul class="tools__allbar-list" id="tools-allbar"></ul>
+          <a class="tools__allbar-cta" href="/recursos/">Ver todas as ferramentas <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="tools-dialog" id="tools-dialog" aria-labelledby="tools-dialog-title">
+      <div class="tools-dialog__panel">
+        <button class="tools-dialog__close" id="tools-dialog-close" type="button" aria-label="Fechar">✕</button>
+        <div class="tools-dialog__media" id="tools-dialog-media"></div>
+        <div class="tools-dialog__body">
+          <span class="tools__category" id="tools-dialog-chip"></span>
+          <h3 class="tools-dialog__title" id="tools-dialog-title"></h3>
+          <div id="tools-dialog-content"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ INTEGRAÇÕES ============ -->
+    <section class="gateways" id="integracoes">
+      <div class="container">
+        <h2 class="h2 h2--xl" data-reveal>Principais Gateways <br>integrados!</h2>
+        <p class="sub sub--mid" data-reveal>Com novas integrações chegando na Astron periodicamente, você fica amparado em todos os meios.</p>
+        <div class="carousel gateways__carousel">
+          <div class="gateways__grid hscroll" id="gateways-grid"></div>
+        </div>
+        <div class="arrows" data-target="gateways-grid">
+          <button type="button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANOS ============ -->
+    <section class="plans" id="planos">
+      <div class="plans__stars" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="h2 plans__title">Escolha o plano ideal para seu negócio.</h2>
+
+        <div class="plans__billing">
+          <span class="plans__billing-icon"><i class="fa-solid fa-circle-info"></i></span>
+          <div>
+            <h3>Como funciona a cobrança?</h3>
+            <p>Aqui na Astron, você paga apenas pelo que realmente usa. Nossa cobrança é baseada em membros ativos: alunos que realizaram login na sua área de membros nos últimos 30 dias. Membros inativos não são contabilizados. Simples assim: seu custo acompanha o crescimento real do seu negócio, sem surpresas.</p>
+            <div class="plans__highlights">
+              <span><i class="fa-solid fa-check"></i> Sem taxas por venda</span>
+              <span><i class="fa-solid fa-check"></i> Sem cobrar por membros inativos</span>
+              <span><i class="fa-solid fa-check"></i> Renovação mensal automática</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel plans__carousel">
+          <div class="plans__grid hscroll" id="plans-grid">
+            <article class="plan">
+              <div class="plan__icon"><i class="fa-solid fa-gift"></i></div>
+              <h3 class="plan__name">Teste Grátis</h3>
+              <p class="plan__price">Grátis</p>
+              <p class="plan__unit">&nbsp;</p>
+              <p class="plan__desc">Pra validar sua ideia sem gastar nada.</p>
+              <a class="plan__cta" href="https://central.astronmembers.com.br/cadastrar?utm_pid=1&on=members">Quero este plano</a>
+              <p class="plan__notice">Após 7 dias, cobramos <strong>R$ 5</strong> apenas para manutenção da conta.</p>
+              <p class="plan__label">O que inclui</p>
+              <ul class="plan__features">
+                <li><i class="fa-solid fa-user c-pink"></i> Até <strong>10</strong> membros ativos</li>
+                <li><i class="fa-solid fa-circle-play c-green"></i> <strong>3</strong> cursos</li>
+                <li><i class="fa-solid fa-play c-green"></i> <strong>20</strong> aulas</li>
+                <li><i class="fa-solid fa-tags c-green"></i> <strong>5</strong> planos de acesso</li>
+                <li><i class="fa-solid fa-user-shield c-pink"></i> <strong>2</strong> administradores</li>
+                <li><i class="fa-solid fa-certificate c-green"></i> <strong>1</strong> certificado</li>
+                <li><i class="fa-solid fa-users c-pink"></i> <strong>1</strong> comunidade</li>
+              </ul>
+            </article>
+
+            <article class="plan">
+              <div class="plan__icon"><i class="fa-solid fa-rocket"></i></div>
+              <h3 class="plan__name">Starter</h3>
+              <p class="plan__price">R$ 0,74</p>
+              <p class="plan__unit">por lead ativo</p>
+              <p class="plan__desc">Para produtores que estão crescendo e querem profissionalizar sua entrega.</p>
+              <a class="plan__cta" href="https://central.astronmembers.com.br/cadastrar?utm_pid=8&on=members">Quero este plano</a>
+              <p class="plan__notice">Mensalidade de <strong>R$ 147,00</strong> enquanto você estiver dentro do limite deste plano.</p>
+              <p class="plan__label">O que inclui</p>
+              <ul class="plan__features">
+                <li><i class="fa-solid fa-user c-pink"></i> Até <strong>200</strong> membros ativos</li>
+                <li><i class="fa-solid fa-circle-play c-green"></i> Cursos <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-play c-green"></i> Aulas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-tags c-green"></i> Planos de acesso <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-user-shield c-pink"></i> Até <strong>2</strong> administradores</li>
+                <li><i class="fa-solid fa-certificate c-green"></i> Certificados <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-file-circle-check c-green"></i> Provas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-users c-pink"></i> <strong>1</strong> comunidade</li>
+                <li><i class="fa-solid fa-globe c-pink"></i> <strong>1</strong> domínio personalizado</li>
+                <li><i class="fa-solid fa-filter c-pink"></i> Até <strong>2</strong> pipelines de CRM</li>
+              </ul>
+            </article>
+
+            <article class="plan plan--featured">
+              <span class="plan__badge"><i class="fa-solid fa-fire"></i> Mais Popular</span>
+              <div class="plan__icon"><i class="fa-solid fa-user-tie"></i></div>
+              <h3 class="plan__name">Professional</h3>
+              <p class="plan__price">R$ 0,59</p>
+              <p class="plan__unit">por lead ativo</p>
+              <p class="plan__desc">Para negócios em expansão que precisam de mais escala, equipe e integrações.</p>
+              <a class="plan__cta plan__cta--dark" href="https://central.astronmembers.com.br/cadastrar?utm_pid=9&on=members">Quero este plano</a>
+              <p class="plan__notice">Mensalidade de <strong>R$ 297,00</strong> enquanto você estiver dentro do limite deste plano.</p>
+              <p class="plan__label">O que inclui</p>
+              <ul class="plan__features">
+                <li><i class="fa-solid fa-user c-pink"></i> Até <strong>500</strong> membros ativos</li>
+                <li><i class="fa-solid fa-circle-play c-green"></i> Cursos <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-play c-green"></i> Aulas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-tags c-green"></i> Planos de acesso <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-user-shield c-pink"></i> Até <strong>5</strong> administradores</li>
+                <li><i class="fa-solid fa-certificate c-green"></i> Certificados <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-file-circle-check c-green"></i> Provas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-users c-pink"></i> Até <strong>5</strong> comunidades</li>
+                <li><i class="fa-solid fa-globe c-pink"></i> Até <strong>2</strong> domínios personalizados</li>
+                <li><i class="fa-solid fa-filter c-pink"></i> Até <strong>5</strong> pipelines de CRM</li>
+                <li><i class="fa-solid fa-check c-green"></i> App Mobile</li>
+              </ul>
+            </article>
+
+            <article class="plan plan--mono">
+              <div class="plan__icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3 class="plan__name">Scale</h3>
+              <p class="plan__price">R$ 0,59</p>
+              <p class="plan__unit">por lead ativo</p>
+              <p class="plan__desc">Para agências e times de marketing que estão escalando suas ofertas no digital.</p>
+              <a class="plan__cta" href="https://central.astronmembers.com.br/cadastrar?utm_pid=10&on=members">Quero este plano</a>
+              <p class="plan__notice">Mensalidade de <strong>R$ 587,00</strong> enquanto você estiver dentro do limite deste plano.</p>
+              <p class="plan__label">O que inclui</p>
+              <ul class="plan__features">
+                <li><i class="fa-solid fa-user"></i> Até <strong>1.000</strong> membros ativos</li>
+                <li><i class="fa-solid fa-circle-play"></i> Cursos <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-play"></i> Aulas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-tags"></i> Planos de acesso <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-user-shield"></i> Até <strong>30</strong> administradores</li>
+                <li><i class="fa-solid fa-certificate"></i> Certificados <span class="spec">Ilimitados</span></li>
+                <li><i class="fa-solid fa-file-circle-check"></i> Provas <span class="spec">Ilimitadas</span></li>
+                <li><i class="fa-solid fa-users"></i> Até <strong>10</strong> comunidades</li>
+                <li><i class="fa-solid fa-globe"></i> Até <strong>5</strong> domínios personalizados</li>
+                <li><i class="fa-solid fa-filter"></i> Até <strong>30</strong> pipelines de CRM</li>
+                <li><i class="fa-solid fa-check"></i> App Mobile</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="arrows plans__arrows" data-target="plans-grid">
+          <button type="button" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="plans__enterprise">
+          <span class="plans__enterprise-icon"><i class="fa-solid fa-building"></i></span>
+          <div class="plans__enterprise-copy">
+            <h3>Sua operação passou de <strong>1.000 membros ativos</strong>?</h3>
+            <p>No Enterprise, membros ativos, cursos e comunidades são ilimitados, com até 100 administradores e 10 domínios personalizados, e um custo fixo e previsível todo mês.</p>
+          </div>
+          <div class="plans__enterprise-action">
+            <span class="plans__enterprise-price">Enterprise · R$ 1.197,00<small>/mês</small></span>
+            <a class="plans__enterprise-cta" href="https://central.astronmembers.com.br/cadastrar?utm_pid=11&on=members">Quero este plano</a>
+          </div>
+        </div>
+
+        <a class="link-under" href="/planos.html">Ver comparação completa dos planos</a>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="testi" id="depoimentos">
+      <div class="container">
+        <p class="kicker">Depoimentos</p>
+        <h2 class="h2">Quem já migrou, não olha pra trás</h2>
+        <p class="sub sub--mid">Depoimentos em vídeo de quem migrou pra Astron e não usa mais outra plataforma.</p>
+        <div class="marquee-mask testi__mask">
+          <ul class="marquee testi__marquee" id="testi-marquee"></ul>
+        </div>
+        <a class="link-under" href="/recursos/depoimentos.html">Ver todos os depoimentos</a>
+      </div>
+    </section>
+
+    <dialog class="video-modal" id="video-modal" aria-label="Vídeo">
+      <button class="video-modal__close" id="video-modal-close" type="button" aria-label="Fechar">✕</button>
+      <div class="video-modal__frame" id="video-modal-frame"></div>
+    </dialog>
+
+    <!-- ============ CTA + FAQ ============ -->
+    <section class="ctafaq" id="cadastro">
+      <div class="container ctafaq__inner">
+        <div class="ctafaq__cta" data-reveal>
+          <img class="ctafaq__bg" src="/images/cta-faq-bg-still.webp" alt="">
+          <span class="ctafaq__scrim"></span>
+          <h2 class="ctafaq__title">Pronto para ter sua <br>própria área de membros?</h2>
+          <p class="ctafaq__sub">Conteúdo, comunidade e vendas num só lugar, sem taxa escondida, sem letra miúda.</p>
+          <a class="ctafaq__btn" href="https://central.astronmembers.com.br/cadastrar?on=members">Criar Conta</a>
+        </div>
+
+        <div class="ctafaq__faq" id="faq" data-reveal>
+          <h3 class="ctafaq__faq-title">Perguntas Frequentes</h3>
+          <p class="ctafaq__faq-sub">Tire as dúvidas que a maioria dos usuários tem.</p>
+          <div class="faq">
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>O pagamento é mensal?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Sim! O pagamento da plataforma é mensal e renovado automaticamente após um plano pago ser adquirido em sua conta.</p></div></div>
+            </div>
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>Posso cancelar a qualquer momento?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Correto! Você poderá cancelar sua assinatura conosco assim que desejar, sem maiores transtornos ou cobranças extras.</p></div></div>
+            </div>
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>Além da mensalidade, possui alguma taxa extra?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Não. Não cobramos taxa por venda nem por membro inativo: você paga só a mensalidade do seu plano. A única exceção é o plano Grátis, que passa a custar R$ 5 por mês após 7 dias, para manutenção da conta.</p></div></div>
+            </div>
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>O que é um CLUB?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Club é a sua área de membros. Nos planos pagos, você cria cursos ilimitados dentro dele e pode vendê-los separadamente.</p></div></div>
+            </div>
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>Consigo migrar meus alunos para a plataforma?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Sim, você consegue importar seus alunos para a Astron dentro do painel de usuários, rapidamente, através de uma planilha em formato CSV.</p></div></div>
+            </div>
+            <div class="faq__item" data-faq>
+              <button class="faq__q" type="button" aria-expanded="false"><span>Como funciona o suporte da Astron Members?</span><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="faq__a"><div><p>Cada conta criada recebe acesso a um gerente de contas, que ajuda com dúvidas diretamente pelo WhatsApp para maior agilidade. Você também pode abrir tickets de atendimento via e-mail junto ao suporte da plataforma.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#inicio"><img src="/images/astron-mark.png" alt=""><span>Astron</span></a>
+          <p class="footer__tagline">A área de membros premium que virou padrão pra quem vive de conteúdo, desde 2019.</p>
+          <a class="footer__mail" href="mailto:relacionamento@astronmembers.com.br">relacionamento@astronmembers.com.br</a>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#ferramentas">Ferramentas</a></li>
+            <li><a href="#planos">Preços</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="/recursos/">Recursos</a></li>
+            <li><a href="https://www.astronacademy.com.br/">Academy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Links úteis</h4>
+          <ul>
+            <li><a href="https://central.astronmembers.com.br/termos-de-uso">Termos de uso</a></li>
+            <li><a href="https://central.astronmembers.com.br/politicas-de-privacidade">Políticas de privacidade</a></li>
+            <li><a href="https://central.astronmembers.com.br/solicitar-reembolso">Auxílio de reembolso</a></li>
+            <li><a href="https://www.postman.com/astronbr/workspace/api-astron-members/documentation/19489555-bf96ce99-0bb5-401f-9533-a371bc9301be">API de integração</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Minha conta</h4>
+          <ul>
+            <li><a href="https://central.astronmembers.com.br/cadastrar?on=members">Criar conta</a></li>
+            <li><a href="https://central.astronmembers.com.br/afiliacao?on=members">Indicação / Afiliação</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Astron Members. Todos os direitos reservados.</span>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/astronmembers" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC5faB_EuY1m45J3-YkSLgeQ" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://t.me/astronmembers" aria-label="Telegram"><i class="fa-regular fa-paper-plane"></i></a>
+          <a href="https://blog.astronmembers.com.br">Blog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

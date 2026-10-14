@@ -1,0 +1,799 @@
+{
+  "evidence_id": "ev_5c9622ec6efb6e2b030fc27bfbaa23111890afb940b49c6ed0beb385f88d13cb",
+  "operation": "inspect_web_page",
+  "authority": "external-service",
+  "confidence": "observed",
+  "parameters": {
+    "cdp_endpoint": "http://127.0.0.1:9331",
+    "allowed_origins": [
+      "https://www.astronmembers.com.br"
+    ],
+    "target_id": "810DD91800CD0694857B9364F046127C",
+    "observation_ms": 1200,
+    "include_accessibility_text": true,
+    "include_console_text": false,
+    "include_json_body_shapes": false,
+    "include_websocket_shapes": false,
+    "include_storage_keys": false,
+    "include_storage_fingerprints": false,
+    "include_script_sources": true
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Observation starts when REA attaches; prior network and console activity is unavailable.",
+    "Raw network headers, bodies, cookies, storage values, console objects, and WebSocket payloads are never retained; explicitly requested primitive console text is retained verbatim, while payload captures retain value-free shapes.",
+    "Source maps are reported only as declarative URLs and are not fetched.",
+    "URL-less scripts and console events without an allowed source URL are excluded because their origin cannot be proven.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "script_inventory": [
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "321b4f657afbf8ba49518e6ab4cbad07ea967d0b4c68f71c7deed05ed09c1187",
+      "bytes": 16
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "321b4f657afbf8ba49518e6ab4cbad07ea967d0b4c68f71c7deed05ed09c1187",
+      "bytes": 16
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "494fd9905a73ac749a31844048a20ba30cbb0894d773da9625346b69a1b2a8a3",
+      "bytes": 323
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "809f0ccf3a610c637c1a57c52b1de73e464ffbd278d515dd772eed8cca84ac4d",
+      "bytes": 195
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "5d5d0768940e393f0d4e0d7030b593d2df937afb106c0ed5d9773d6f66f2a124",
+      "bytes": 318
+    },
+    {
+      "url": "https://www.astronmembers.com.br/js/i18n.js?v=117",
+      "sha256": "1e903908beb7380ed378a036065f3e96dfec25dac53912ec612919ae556c87a8",
+      "bytes": 5074
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "ff8e03f97d204904993072e0807087a3509263ac70b658b71d6514067f6e7356",
+      "bytes": 156
+    },
+    {
+      "url": "https://www.astronmembers.com.br/",
+      "sha256": "b175eb766807fbf409ffc90f3bf24c1539bd950114514f4eeb492f29592a12da",
+      "bytes": 544
+    },
+    {
+      "url": "https://www.astronmembers.com.br/js/main.js?v=151",
+      "sha256": "220b0753ffab02150641c13d58fbf8c0245511efb76096bf41d48f527086c5ba",
+      "bytes": 64057
+    },
+    {
+      "url": "https://www.astronmembers.com.br/translations/novosite.js?v=157",
+      "sha256": "19b29ff996e42d83f068d29e971430f5c04e93ec7f842ffb3ea349c031a87569",
+      "bytes": 323418
+    }
+  ],
+  "accessibility": {
+    "total_nodes": 2629,
+    "headings": [
+      "Navegação",
+      "Links úteis",
+      "Minha conta",
+      "A área de membros completa para captar, entregar e reter alunos",
+      "E como eu lucro mais com o mesmo cliente?",
+      "Quem já migrou, não olha pra trás",
+      "Tudo que você precisa, numa ferramenta só",
+      "Não fragmenta o caminho do Lead",
+      "O Lead consome desde o primeiro clique",
+      "Na Astron você paga apenas por usuário ativo no último mês",
+      "E isso aparece na sua fatura, mês a mês",
+      "Números que sustentam a Astron.",
+      "Todas as ferramentas",
+      "Principais Gateways integrados!",
+      "Escolha o plano ideal para seu negócio.",
+      "Como funciona a cobrança?",
+      "Sua operação passou de 1.000 membros ativos?",
+      "Pronto para ter sua própria área de membros?",
+      "Perguntas Frequentes",
+      "Eu tenho 200 Leads entrando na minha base",
+      "A Astron com você e seu negócio 24/7",
+      "Aumente o seu LTV sem precisar gastar mais em tráfego!",
+      "Do anúncio direto para a sua área",
+      "Ele assiste e se cadastra",
+      "Comunidade e feed desde o início",
+      "Compra direta com link de checkout sem sair da plataforma",
+      "A oferta certa, na hora certa",
+      "Aluno engajado, menos cancelamentos",
+      "Vitrine estilo streaming",
+      "CRM Nativo pra acompanhar cada lead, sem planilha",
+      "Hospede seus vídeos sem custo de ferramenta externa",
+      "Avise o aluno na hora, direto pelo app",
+      "Comunidades privadas pra promover conexão entre alunos",
+      "Tags e pixels pra otimizar sua estratégia de marketing",
+      "Aplicativo próprio, iOS e Android, pro seu aluno estudar de qualquer lugar",
+      "Certificados que valorizam a jornada do aluno",
+      "Planos e cobrança do seu jeito",
+      "Integre com as plataformas que você já usa",
+      "Teste Grátis",
+      "Starter",
+      "Professional",
+      "Scale",
+      "CRM Nativo",
+      "Vitrine estilo streaming",
+      "Aplicativo",
+      "Comunidades",
+      "Central de certificados",
+      "Multi idiomas",
+      "Criação de multiplanos",
+      "Formulários de inscrição",
+      "Importação de usuários",
+      "Tags e pixels",
+      "Proteção DRM",
+      "Administradores e permissões",
+      "Sistema de personalização"
+    ]
+  },
+  "resources": [
+    {
+      "resource_key": "res_02509cb6f21fe137d71da43b73770b835702bc534684b1493861431d2c5f4ac2",
+      "url": "https://www.astronmembers.com.br/images/tsum-formularios.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 6970
+    },
+    {
+      "resource_key": "res_036f81a3cf682591e0b45f6f627d00b79c2db92cb0baf605472c073755b3cb11",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/hotmart.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1888
+    },
+    {
+      "resource_key": "res_03975de8efd0c219b70bdc88bf5351eb9fc47a89a835d3f63dfcb619d5158d99",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/monetizze.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2020
+    },
+    {
+      "resource_key": "res_03c4afe2bd34dc5d198bf76ec5ab4d73324d52a4d6c816c07a45cbb70e548f2b",
+      "url": "https://www.astronmembers.com.br/css/novosite.css?v=292",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Stylesheet",
+      "mime_type": "text/css",
+      "content_size": 469654
+    },
+    {
+      "resource_key": "res_048362af100bda21ffbb2e267fc5b94e9134e678bc564228deae0124c3f41400",
+      "url": "https://www.astronmembers.com.br/js/i18n.js?v=117",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Script",
+      "mime_type": "application/javascript",
+      "content_size": 5074
+    },
+    {
+      "resource_key": "res_0cefb4d71fd72df536005302572de6ccc16da055b0121096815318d09aff871c",
+      "url": "https://www.astronmembers.com.br/images/avatar-3.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 2925
+    },
+    {
+      "resource_key": "res_0f4be41186e181c31bd47695294762fdcf0961c1a3b997d53cf6de18bef60079",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/iugu.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 455
+    },
+    {
+      "resource_key": "res_12a0ca77408f57e1085480c3471d0db2b5e71d33b4e270c7f0db5bd5ec08660b",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/pandavideos.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3042
+    },
+    {
+      "resource_key": "res_18ec16a92d010ae352a0124ac66def3926e76fd5515f219e3b22dba250dc3dd8",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/googleanalytics.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1236
+    },
+    {
+      "resource_key": "res_194f04c25e71ec02fa70eb889160c4369553842f871aa7af45bf270702892571",
+      "url": "https://www.astronmembers.com.br/images/logos/conteudo-fechado-logo.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 14072
+    },
+    {
+      "resource_key": "res_1c591dfcf8ffcfb5c7c3a0f06f3692d29d20ea0f8703f34688f47fd34c38dced",
+      "url": "https://www.astronmembers.com.br/images/features/comunidades.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 877
+    },
+    {
+      "resource_key": "res_1fc8c776cf940de3c9b7b4eeebc7e3384a7c84ae24ff7d58d0138cddae81ee17",
+      "url": "https://www.astronmembers.com.br/images/bandeiras/fr.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 72
+    },
+    {
+      "resource_key": "res_20a86e7a88a7ee3193e9ad1a2e5b896ee58c77d347a5c33b7d9def7eeedfbd00",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/engaged.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3016
+    },
+    {
+      "resource_key": "res_2156fdb88e477c5631d64bcaf97e7000ab61540d309324ca5623bb5d655a5cdd",
+      "url": "https://www.astronmembers.com.br/images/features/protecao-drm.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 444
+    },
+    {
+      "resource_key": "res_2e1c72d436e8d4c2312b5bea42ec11d74071df577f3d9d7983eb0b4d74fa8868",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/crispchat.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1071
+    },
+    {
+      "resource_key": "res_3b37354c5fb8a7cb7a40f9085600e451115b89ee7463ea495e58bccbf231793b",
+      "url": "https://www.astronmembers.com.br/images/logos/afiliagram-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 4762
+    },
+    {
+      "resource_key": "res_3b9cc363c4ccb3d5157467bfd1fe1d89b4f536557798799330d41de652110477",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/typebot.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1318
+    },
+    {
+      "resource_key": "res_3e117687a096650b4932855fba184200874b4e1233792ba587241df832e7469c",
+      "url": "https://www.astronmembers.com.br/images/features/tags-e-pixels.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 772
+    },
+    {
+      "resource_key": "res_41557b1dd3ebd3145af740098ca02c24402395e23653ee7356ec9d31a4f69753",
+      "url": "https://www.astronmembers.com.br/images/tsum-administradores.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 9810
+    },
+    {
+      "resource_key": "res_486122535ba4f950f0d53b58e76a71593d6f239f9a0c61caf1ec3b62617b24d5",
+      "url": "https://www.astronmembers.com.br/images/banner-featured.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 37846
+    },
+    {
+      "resource_key": "res_4cc03a98d282b1a60faaa68c5360cb95f8d606c3abb232fb8df9d96695af47de",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/cakto.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1244
+    },
+    {
+      "resource_key": "res_4d076c4d4649ec210186997408416e55486bb37c883049284dd2b7c01edff452",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/ticto.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1725
+    },
+    {
+      "resource_key": "res_4f0427b16dce2d9a0b3335c9b03c7bec57d69ba25759485d558fce4f9bb709c6",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/pagseguro.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3479
+    },
+    {
+      "resource_key": "res_50c54aa227f9ff9913c046a07e007a6d89a4156621dfaa5fae7f7135575fb2a7",
+      "url": "https://www.astronmembers.com.br/images/logos/zap-facil-logo.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 12182
+    },
+    {
+      "resource_key": "res_5b0cc43f88cab351e9266038268c326384c1954a4be37838896921aa96d1027c",
+      "url": "https://www.astronmembers.com.br/translations/novosite.js?v=157",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Script",
+      "mime_type": "application/javascript",
+      "content_size": 323418
+    },
+    {
+      "resource_key": "res_5d84ca27fa3425cacbc84a8f62ee4fadaa75315cc2cb5a9f1d5a167984ed112d",
+      "url": "https://www.astronmembers.com.br/images/features/formularios-de-inscricao.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 745
+    },
+    {
+      "resource_key": "res_5e0f8970cf3c3f32173e8dfd16b5b1150572f9f5291fc7b99d6751e2bf8e6ac8",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/facebookpixel.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2656
+    },
+    {
+      "resource_key": "res_603e03df2814a5cab347fd6613ecd2bccf38137c107d25437151b1a23f97b062",
+      "url": "https://www.astronmembers.com.br/images/lesson-video-frame.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 19466
+    },
+    {
+      "resource_key": "res_631da758fe87d62130a96aca6d281f92348d4028f52e3bb67d57b81e0d3269c8",
+      "url": "https://www.astronmembers.com.br/images/module-01.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 24960
+    },
+    {
+      "resource_key": "res_649345bda37d69e23a5f16c9a681868b7daca44e90bdd51cd1b4281670861ea8",
+      "url": "https://www.astronmembers.com.br/images/features/sistema-de-custumizacao.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 677
+    },
+    {
+      "resource_key": "res_6a8529a7e53a9625bd1326dcd2cdfff3e36da887bdcbba32203cc9a827590e4f",
+      "url": "https://www.astronmembers.com.br/images/hero-bg-mobile.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 38704
+    },
+    {
+      "resource_key": "res_6c4cf72e413d8732bb4e5367783a3e8382d709ebca4995ae096bfa89d2343324",
+      "url": "https://www.astronmembers.com.br/images/bandeiras/es.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 294
+    },
+    {
+      "resource_key": "res_6c8569af38a1e84aec92f014cc2cbc720011de71a253102dac76e8fb7ce91fc0",
+      "url": "https://www.astronmembers.com.br/images/bandeiras/br.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 434
+    },
+    {
+      "resource_key": "res_72d7ce593bb403f241a730a7e903005912526a3b5dab1d7c17077eff8c174629",
+      "url": "https://www.astronmembers.com.br/images/tsum-multiidiomas.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 15560
+    },
+    {
+      "resource_key": "res_745f4a5d2fa8d94733fb99badc497f36a35aceffdb81b7936ad703042b8f5613",
+      "url": "https://www.astronmembers.com.br/images/features/criacao-de-multiplanos.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 871
+    },
+    {
+      "resource_key": "res_7594b596cf059039336378e816767ccf581566d7be7f0de3a6538ec19f740e21",
+      "url": "https://www.astronmembers.com.br/images/features/gestao-de-administradores-e-permissoes.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 1788
+    },
+    {
+      "resource_key": "res_78939973a54ef3c6facdc7eb451d140242fd07f2794c5343be02f95ae253d94f",
+      "url": "https://www.astronmembers.com.br/images/module-04.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 29779
+    },
+    {
+      "resource_key": "res_79565e360d171b3bc2c8fcdfa2bfde4198e34178afad0b93ab73776c7ac12f1d",
+      "url": "https://www.astronmembers.com.br/images/logo-box.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1509
+    },
+    {
+      "resource_key": "res_7d199dffaf3a7570de9a48c98932c4005bea603a57d1140c74a7e87f174a6756",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/intercomchat.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2509
+    },
+    {
+      "resource_key": "res_7d6377caf4f39a910bc7d60e4659c17b197a1c78de151638f59d93b4d115ba6e",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/perfectpay.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2230
+    },
+    {
+      "resource_key": "res_865b7ebc2aeb48be0606eec20593474b0e57b056aec45bbdf45ea7196cd587ac",
+      "url": "https://www.astronmembers.com.br/js/main.js?v=151",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Script",
+      "mime_type": "application/javascript",
+      "content_size": 64057
+    },
+    {
+      "resource_key": "res_8ddfb8ca77b82ef63e7094f4da2de04fb5425a1e5e1bb49b70677118fb238271",
+      "url": "https://www.astronmembers.com.br/images/logos/despertar-digital-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 4340
+    },
+    {
+      "resource_key": "res_99b564e3b89f9839c1235b5661175aa85f596cdaa9bd4511845c591b0d8d73fe",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/mercadopago.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2976
+    },
+    {
+      "resource_key": "res_9bfdaa0e4f45ac6a4de8d2179c4f4de6ae8ea06cb1154636262bcd63ce8fde20",
+      "url": "https://www.astronmembers.com.br/images/logos/instituto-libano-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3847
+    },
+    {
+      "resource_key": "res_9c81970e39e59230bd4f38f622b78a7479fecaf0575418d128133bcb76a49c87",
+      "url": "https://www.astronmembers.com.br/images/avatar-2.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 3634
+    },
+    {
+      "resource_key": "res_9ee2a3892d5aa0816a458415cf6b3f221467808a6efd25cdcc71523c8e4e21df",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/asaas.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1863
+    },
+    {
+      "resource_key": "res_a20823ec40eb484a1a4a659f6f00c0c4824e68d329f1fb70172fc7b49ebc04a2",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/stripe.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 564
+    },
+    {
+      "resource_key": "res_a3004a3f7be95d8929515b825d8f1579b40c2f2ac2506ad95154ba6572d1055b",
+      "url": "https://www.astronmembers.com.br/images/tsum-certificados.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 8498
+    },
+    {
+      "resource_key": "res_a68516f14504ed6864eaa3264fd60b7fd9e66651d3a7778761107a2836ef4a19",
+      "url": "https://www.astronmembers.com.br/images/bandeiras/us.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 230
+    },
+    {
+      "resource_key": "res_b09ba00af6664077ffb2fe481b3cc5a4884709585e5f4a45e4dd64a822c242dc",
+      "url": "https://www.astronmembers.com.br/images/tsum-vitrine.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 16612
+    },
+    {
+      "resource_key": "res_b15a53a6df25da2fd3730b139cd0847e7acf0d7a51482232676c563e79fa7486",
+      "url": "https://www.astronmembers.com.br/images/tsum-drm.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 7760
+    },
+    {
+      "resource_key": "res_b4638157bcd85a75a6df53f5784ee796b50c44c2537422ca4530009aecf7ce3a",
+      "url": "https://www.astronmembers.com.br/images/module-06.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 31875
+    },
+    {
+      "resource_key": "res_b63c706301b73e902f524344403c372bc70a70e50b3c467ba4d908f493f3dfda",
+      "url": "https://www.astronmembers.com.br/images/features/importacao-de-usuarios.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 488
+    },
+    {
+      "resource_key": "res_b9042dd5cbc3c330640e2609d7c0555a209aebc4ac515957609d2d4cc265dff8",
+      "url": "https://www.astronmembers.com.br/images/tsum-aplicativo.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 8446
+    },
+    {
+      "resource_key": "res_c1b292d18aa89ebb2b4f44b672fa8ac10c28eac3e8627cafcafad66d9d5cdf40",
+      "url": "https://www.astronmembers.com.br/images/features/aplicativo.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 408
+    },
+    {
+      "resource_key": "res_c2cf59938e624ee4069668db82ef67d699ddc4dc05485edebf3134ef67ab5fcf",
+      "url": "https://www.astronmembers.com.br/images/module-03.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 32024
+    },
+    {
+      "resource_key": "res_c31bf9f44796f5674fb8678908d10cbc12e81cc460caac382b60f9bf86b726a3",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/hotjar.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1812
+    },
+    {
+      "resource_key": "res_c3fd4414e221bb397b758543bf1772d9c489ed4957d96ed401e119a91b5efbc8",
+      "url": "https://www.astronmembers.com.br/images/features/vitrine-estilo-netflix.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 1324
+    },
+    {
+      "resource_key": "res_c5156d12d6e7d810356a890b294bc632cbc41bc4f709c96ca574a764357f5401",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/kiwify.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2156
+    },
+    {
+      "resource_key": "res_cda348305ad2077eaf8a6b9b183a3606e135f9def604254fb39c752616550803",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/eduzz.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2128
+    },
+    {
+      "resource_key": "res_cf0e5608c1a6da975aff3c3b98177077ea9835085491494653e6b25c5a64b551",
+      "url": "https://www.astronmembers.com.br/images/tsum-comunidades.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 10636
+    },
+    {
+      "resource_key": "res_cf1fad19fe6a4711f54db1683ea464ec5ec6ea0a51d538ffc009b919f8fafe80",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/greenn.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3209
+    },
+    {
+      "resource_key": "res_d08f3c7eaa8c3b0aa939b71a76e8208d738e7572f0bd5c292e47bfcc348300bd",
+      "url": "https://www.astronmembers.com.br/images/header-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 4838
+    },
+    {
+      "resource_key": "res_d20ebf8948afe8286df7f8c1f18f063c421fd7ba95ed3f784ca5a41670ca01a5",
+      "url": "https://www.astronmembers.com.br/images/astron-mark.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 46120
+    },
+    {
+      "resource_key": "res_d4173a165ee25c497d24899db80b8f1b141298ba1bb55f7641161c9f211de34b",
+      "url": "https://www.astronmembers.com.br/images/tsum-personalizacao.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 9852
+    },
+    {
+      "resource_key": "res_d5c53c2a65514e3b714f7fc30fbe81f5815f449c1ea44414c256f5fe24405e63",
+      "url": "https://www.astronmembers.com.br/images/logos/power-bi-experience-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 6372
+    },
+    {
+      "resource_key": "res_db725e2d65a5425bbd5143e4bc8084a50ca272de284f8e33a00f8cfda42c99ad",
+      "url": "https://www.astronmembers.com.br/images/module-05.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 40698
+    },
+    {
+      "resource_key": "res_dd53a319bf717916daddbc9cf8f8c13795a5eca67eefe009408a0babe779666e",
+      "url": "https://www.astronmembers.com.br/images/tsum-multiplanos.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 7840
+    },
+    {
+      "resource_key": "res_e4421b415cfcf712cbf8fcde32ed76f623bda07fe4c39a8e6e3df67af30ce2bc",
+      "url": "https://www.astronmembers.com.br/images/avatar-1.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 3343
+    },
+    {
+      "resource_key": "res_e562f8bbd4ce419ff922b27f12c234946a8c6a3769f3074e169a51786c599b61",
+      "url": "https://www.astronmembers.com.br/images/features/crm.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 217
+    },
+    {
+      "resource_key": "res_e92397e92f2339018f2f8dd9eaa8480ca395e17410ba3661e997c9d0f07f4ba9",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/braip.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 3027
+    },
+    {
+      "resource_key": "res_ebbd879da1b2c085b03a5dac85f667b83d2675e516da0b964d0ef5f0db5d9c0d",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/yampi.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2490
+    },
+    {
+      "resource_key": "res_ec10cfb1600d677d83c508be34dcc7f6291825cf46dd75066c4834b1f9ea6df3",
+      "url": "https://www.astronmembers.com.br/images/features/multi-idiomas.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 2534
+    },
+    {
+      "resource_key": "res_ed3c40400f3e06a0dba4f62491a8a01fa9013ec0274b4d5edf25fdb2544ee94a",
+      "url": "https://www.astronmembers.com.br/images/tsum-tags.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 8758
+    },
+    {
+      "resource_key": "res_ef98bc8c383cb132a1efac9dfad437dfab28995a3826f70612f3b5da5fb8b25f",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/lastlink.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1083
+    },
+    {
+      "resource_key": "res_f5cfc8d8fd9668991fc92f6754c94de3b6652d2f9bcbcab7e5151dbaee4c624b",
+      "url": "https://www.astronmembers.com.br/images/tsum-crm.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 10946
+    },
+    {
+      "resource_key": "res_f601a80520a9c66894a17c699607bcd3462ecd5ae0d1b1081ae5ffb90356aabc",
+      "url": "https://www.astronmembers.com.br/images/module-02.jpg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/jpeg",
+      "content_size": 31042
+    },
+    {
+      "resource_key": "res_f9fa8a8088d73da9875f5fcdecfbfdd20e17ce6c1e2133cfd09bd9ce9b65ec50",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/hubla.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1049
+    },
+    {
+      "resource_key": "res_fc8ebf67eea4fefc80d87663becb123c5ca09bc450ae6f3736491b1b26319f5b",
+      "url": "https://www.astronmembers.com.br/images/academy-logo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1541
+    },
+    {
+      "resource_key": "res_fd71eae41fcacdb951f3106ea01608500377c5e4beb3f4b5313dadcd48996da7",
+      "url": "https://www.astronmembers.com.br/images/gateways-full/vimeo.png",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/png",
+      "content_size": 1761
+    },
+    {
+      "resource_key": "res_ff7fbc52787e3834aa2566644cba681c4140d9eb2773a420552b906678bc9e68",
+      "url": "https://www.astronmembers.com.br/images/features/central-de-certificados.svg",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/svg+xml",
+      "content_size": 846
+    },
+    {
+      "resource_key": "res_ffa8bbfc5f27d13d00cd07c2d7977a5909acffe509b8af583def03485db4f16d",
+      "url": "https://www.astronmembers.com.br/images/tsum-importacao.webp",
+      "origin": "https://www.astronmembers.com.br",
+      "type": "Image",
+      "mime_type": "image/webp",
+      "content_size": 6592
+    }
+  ]
+}

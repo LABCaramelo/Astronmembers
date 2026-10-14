@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-14",
+  "checks": [
+    {
+      "name": "Setas mudam aba e foco",
+      "pass": true
+    },
+    {
+      "name": "Email vazio não avança",
+      "pass": true
+    },
+    {
+      "name": "Email inválido não avança",
+      "pass": true
+    },
+    {
+      "name": "Cadastro abre vitrine",
+      "pass": true
+    },
+    {
+      "name": "Módulo abre CRM pelo teclado",
+      "pass": true
+    },
+    {
+      "name": "Lead aparece no CRM",
+      "pass": true
+    },
+    {
+      "name": "CRM permite rolar cards",
+      "pass": true
+    },
+    {
+      "name": "Lead abre venda pelo teclado",
+      "pass": true
+    },
+    {
+      "name": "Detalhe abre modal",
+      "pass": true
+    },
+    {
+      "name": "Escape fecha modal",
+      "pass": true
+    },
+    {
+      "name": "Sem erros JS",
+      "pass": true
+    },
+    {
+      "name": "Menu móvel foca primeiro item",
+      "pass": true
+    },
+    {
+      "name": "Submenu foca Voltar",
+      "pass": true
+    },
+    {
+      "name": "Níveis inativos são inert",
+      "pass": true
+    },
+    {
+      "name": "Tab contém foco no menu",
+      "pass": true
+    },
+    {
+      "name": "Escape fecha menu e devolve foco",
+      "pass": true
+    },
+    {
+      "name": "Sem overflow horizontal",
+      "pass": true
+    },
+    {
+      "name": "Hub desktop desde960px",
+      "pass": true
+    },
+    {
+      "name": "Autoplay pausa durante preenchimento",
+      "pass": true
+    }
+  ],
+  "responsive": [
+    {
+      "width": 360,
+      "overflow": false,
+      "hubLayout": "flex",
+      "stage": 232
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "hubLayout": "flex",
+      "stage": 232
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "hubLayout": "flex",
+      "stage": 232
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "hubLayout": "grid",
+      "stage": 316
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "hubLayout": "grid",
+      "stage": 316
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "hubLayout": "grid",
+      "stage": 316
+    }
+  ]
+}

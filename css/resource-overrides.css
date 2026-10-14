@@ -1,0 +1,7 @@
+/* Accessibility and local recreation adjustments shared by detail pages. */
+[inert] { pointer-events: none; }
+.rec-video__frame:focus-visible { outline-offset: 4px; }
+.mobile-menu .mm-level[aria-hidden="true"] { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
